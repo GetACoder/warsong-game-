@@ -179,7 +179,7 @@ socket.on ('updatePos', function (data) {
 			}
 		} else if (data.player[i].id === playerID && data.player[i].team === "blue" && data.player[i].hasFlag) {
 			var dist = getDistance( { x: _width - 135, y: 75}, { x: data.player[i].x, y: data.player[i].y});
-			if (dist < 20) {
+			if (dist < 20 && blueFlag) {
 				blueFlag = false;
 				socket.emit('updateScore', {
 					team: 'blue',
@@ -203,7 +203,7 @@ socket.on ('updatePos', function (data) {
 			}
 		} else if (data.player[i].id === playerID && data.player[i].team === "red" && data.player[i].hasFlag) {
 			var dist = getDistance( { x: 110, y: _height - 100}, { x: data.player[i].x, y: data.player[i].y});
-			if (dist < 20) {
+			if (dist < 20 && redFlag) {
 				redFlag = false;
 				socket.emit('updateScore', {
 					team: 'red',
