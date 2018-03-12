@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Play Warsong</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.js"></script>
+		<style>
+			* {
+				font-family: verdana;
+			}
+			body {
+				background-color: rgba( 31, 206, 109, 255);
+				text-align: center;
+				margin: auto;
+				padding: auto;
+			}
+			
+			canvas {
+				display: none;
+			}
+			input[type=text] {
+				border: 0px;
+				background-color: rgba( 26, 175, 93, 255);
+				color: rgba( 31, 206, 109, 255);
+				padding: 12px;
+				border-radius: 8px;
+				font-weight: bolder;
+			}
+			
+			.plybtn {
+				width: 120px;
+				border: 0px;
+				background-color: rgba( 26, 116, 66, 255);
+				color: rgba( 255, 255, 255, 255);
+				padding: 8px;
+				border-radius: 4px;
+				font-size: 16px;
+				font-weight: bolder;
+			}
+			
+			#addUser {
+				padding-top: 240px;
+			}
+		</style>
+    </head>
+    <body>
+		<div id="addUser">
+			<p>
+				<input id="username" type="text" size="16"  placeholder="username"/>
+			</p>
+			<p>
+				<button  class="plybtn" id="playNow" onclick="addUser();">PLAY</button>
+			</p>
+		</div>
+		<canvas id="myCanvas"></canvas>
+		<!-- <script src="js/socket.io.js"></script> -->
+		<script src="js/game.js"></script>
+    </body>
+</html>
